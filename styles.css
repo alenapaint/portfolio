@@ -1,0 +1,129 @@
+:root{--bg:#0d0c0b;--dark:#17130f;--text:#f7f0ea;--muted:rgba(247,240,234,.72);--line:rgba(247,240,234,.15);--paper:#ebe1d7;--brown:#31241d}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif}a{text-decoration:none;color:inherit}.header{position:fixed;z-index:20;inset:0 0 auto 0;display:flex;justify-content:space-between;align-items:flex-start;padding:28px 5vw;background:linear-gradient(to bottom,rgba(8,7,6,.85),rgba(8,7,6,0))}.logo{display:flex;gap:18px;text-transform:uppercase}.logo span{font-family:Georgia,serif;font-size:54px;line-height:.85;border-right:1px solid rgba(255,255,255,.35);padding-right:18px}.logo b{font-family:Georgia,serif;font-size:17px;line-height:1.2;font-weight:400;letter-spacing:.08em}.logo small{display:block;margin-top:7px;font:11px Arial;letter-spacing:.18em;color:var(--muted)}nav{display:flex;gap:34px;padding-top:8px;font-size:13px;text-transform:uppercase;letter-spacing:.08em}.hero{min-height:100vh;background:#111}.hero img{display:block;width:100%;min-height:100vh;object-fit:cover;object-position:center top}.section{padding:110px 5vw}.about,.services{background:var(--dark);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.label{margin:0 0 18px;text-transform:uppercase;letter-spacing:.18em;font-size:12px;color:rgba(247,240,234,.62)}.two{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:start}.head{margin-bottom:42px}h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:400;margin:0}h1,h2{font-size:clamp(40px,5vw,78px);line-height:.98;letter-spacing:-.05em}p{line-height:1.75}.about p,.list p,.contacts p,.note{font-size:17px;color:var(--muted)}.portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.project img,.project.empty:before{width:100%;height:330px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#241e1a,#6c5a4b);object-fit:cover}.project.empty:before{content:"Добавьте фото проекта";color:rgba(255,255,255,.55);font-size:12px;letter-spacing:.12em;text-transform:uppercase}.project span{display:block;margin-top:18px;color:rgba(247,240,234,.5);font-size:13px}.project h3{margin-top:8px;font:13px Arial;text-transform:uppercase;letter-spacing:.08em}.note{margin-top:42px;border:1px solid var(--line);padding:22px}code{background:rgba(255,255,255,.08);padding:3px 6px}.list{display:grid;gap:18px}.list article{padding:28px;border:1px solid var(--line);background:rgba(255,255,255,.03)}.list h3{font-size:28px;margin-bottom:12px}.process ol{margin:0;padding:0;list-style:none;border-top:1px solid var(--line)}.process li{display:grid;grid-template-columns:90px 1fr;gap:32px;padding:28px 0;border-bottom:1px solid var(--line);font:clamp(24px,3vw,42px) Georgia,serif}.process span{font:13px Arial;color:rgba(247,240,234,.55);letter-spacing:.14em}.contacts{margin:0 5vw 90px;padding:80px 6vw;border:1px solid var(--line);text-align:center;background:linear-gradient(135deg,#201913,#0f0d0b)}.contacts h2{max-width:900px;margin:auto}.contacts p{max-width:650px;margin:26px auto 0}.contacts div{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:34px}.contacts a{border:1px solid rgba(255,255,255,.25);padding:15px 24px;text-transform:uppercase;letter-spacing:.12em;font-size:12px}footer{display:flex;justify-content:space-between;padding:28px 5vw;border-top:1px solid var(--line);color:rgba(247,240,234,.55);font-size:13px}@media(max-width:900px){.header{position:absolute;flex-direction:column;gap:18px}.logo span{font-size:42px}nav{flex-wrap:wrap;gap:14px;font-size:11px}.hero img{min-height:auto}.section{padding:72px 24px}.two{grid-template-columns:1fr;gap:28px}.portfolio-grid{grid-template-columns:1fr}.process li{grid-template-columns:1fr;gap:8px}.contacts{margin-left:24px;margin-right:24px;padding:50px 24px}footer{flex-direction:column;gap:8px}}
+
+
+/* ---------- Mobile adaptation ---------- */
+@media (max-width: 900px) {
+  body { overflow-x: hidden; }
+
+  .header {
+    position: absolute;
+    padding: 18px 18px 0;
+    gap: 14px;
+    background: linear-gradient(to bottom, rgba(8,7,6,.9), rgba(8,7,6,0));
+  }
+
+  .logo { gap: 12px; }
+
+  .logo span {
+    font-size: 38px;
+    padding-right: 12px;
+  }
+
+  .logo b {
+    font-size: 13px;
+    line-height: 1.18;
+  }
+
+  .logo small {
+    font-size: 9px;
+    margin-top: 4px;
+  }
+
+  nav {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    justify-content: start;
+    gap: 10px 16px;
+    padding-top: 0;
+    font-size: 10px;
+    letter-spacing: .08em;
+  }
+
+  .hero {
+    min-height: auto;
+    background: #0d0c0b;
+  }
+
+  .hero img {
+    width: 100%;
+    min-height: 0;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    object-position: center top;
+  }
+
+  .section { padding: 64px 20px; }
+
+  .two {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  h1, h2 {
+    font-size: 38px;
+    line-height: 1.02;
+  }
+
+  .about p, .list p, .contacts p, .note { font-size: 15px; }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .project img, .project.empty:before { height: 280px; }
+
+  .list article { padding: 22px; }
+
+  .list h3 { font-size: 24px; }
+
+  .process li {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    font-size: 25px;
+    line-height: 1.15;
+  }
+
+  .contacts {
+    margin: 0 20px 64px;
+    padding: 44px 22px;
+  }
+
+  .contacts div {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .contacts a { width: 100%; }
+
+  footer {
+    padding: 24px 20px;
+    flex-direction: column;
+    gap: 6px;
+  }
+}
+
+@media (max-width: 520px) {
+  .header { padding: 14px 14px 0; }
+
+  nav {
+    grid-template-columns: repeat(2, max-content);
+    gap: 8px 14px;
+    font-size: 9px;
+  }
+
+  .logo span { font-size: 34px; }
+
+  h1, h2 { font-size: 34px; }
+
+  .section { padding: 56px 16px; }
+
+  .project img, .project.empty:before { height: 240px; }
+
+  .contacts {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+}
